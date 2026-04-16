@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Pavan Patnapu | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:#0a0f1c;
+  color:#e6f1ff;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  background:#0a0f1c;
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
+}
+nav a{
+  color:#aaa;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+  position:relative;
+  transition:0.3s;
+}
+nav a:hover{
+  color:#ffbf00;
+  text-shadow:0 0 6px #ffbf00, 0 0 12px rgba(255,191,0,0.5);
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  bottom:-4px;
+  left:0;
+  background:#ffbf00;
+  box-shadow:0 0 8px #ffbf00;
+  transition:0.3s;
+}
+nav a:hover::after{width:100%}
+
+/* HERO */
+header{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+header img{
+  width:150px;height:150px;border-radius:50%;
+  border:2px solid #ffbf00;
+  box-shadow:0 0 25px rgba(255,191,0,0.5);
+  margin-bottom:20px;
+}
+.highlight{color:#ffbf00;}
+header h1{font-size:2.8rem;}
+header p{
+  margin-top:10px;
+  font-size:1.1rem;
+  color:#aaa;
+}
+
+.btn{
+  margin-top:20px;
+  padding:10px 25px;
+  border:1px solid #ffbf00;
+  color:#ffbf00;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+}
+.btn:hover{
+  background:#ffbf00;
+  color:#000;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 10%;
+  position:relative;
+}
+section::after{
+  content:"";
+  position:absolute;
+  inset:20px;
+  border-radius:12px;
+  border:1px solid rgba(255,191,0,0.3);
+  box-shadow:0 0 15px rgba(255,191,0,0.08);
+  pointer-events:none;
+}
+
+.section-title{
+  font-size:2rem;
+  margin-bottom:30px;
+  color:#ffbf00;
+}
+
+/* CARDS */
+.card{
+  background:#111827;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:15px;
+  border:1.5px solid #ffbf00;
+  box-shadow:0 0 8px rgba(255,191,0,0.2);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 12px rgba(255,191,0,0.25);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#888;
+}
+
+/* ANIMATION */
+.hidden{opacity:0;transform:translateY(40px);transition:1s}
+.show{opacity:1;transform:translateY(0)}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div><b>Sai Pavan Patnapu</b></div>
+  <div>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header>
+<img src="Sai Pavan Profile.jpeg">
+<h1>Hi, I'm <span class="highlight">Sai Pavan Patnapu</span></h1>
+<p id="typing"></p>
+<a href="#projects" class="btn">Explore My Work</a>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+<h2 class="section-title">About Me</h2>
+<p>
+I am a <b>Computer Science Engineering student specializing in AI/ML</b> with a strong foundation in programming, cloud technologies, and software development.
+<br><br>
+I have hands-on experience working on <b>AI, Machine Learning, Deep Learning, Cloud, and Generative AI applications</b>, building intelligent and scalable solutions.
+<br><br>
+Seeking opportunities to contribute to <b>innovative and scalable solutions</b> while continuously enhancing my technical and problem-solving skills.
+</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+<h2 class="section-title">Skills</h2>
+<div class="grid">
+<div class="card"><b>Languages</b><br>Python, SQL</div>
+<div class="card"><b>Frameworks</b><br>Pandas, NumPy, TensorFlow, Scikit-Learn, OpenCV</div>
+<div class="card"><b>Technologies</b><br>AI, ML, Deep Learning, AWS Cloud</div>
+<div class="card"><b>Tools</b><br>MySQL, Git/GitHub, Docker, Streamlit</div>
+<div class="card"><b>Soft Skills</b><br>Communication, Leadership, Stakeholder Management</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="hidden">
+<h2 class="section-title">Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Coastal Change and Shoreline Prediction using Deep Learning</h3>
+<p>
+Developed a deep learning model using satellite data to map, track, and predict shoreline changes, identifying coastal erosion and accretion patterns with high accuracy.
+</p>
+</div>
+
+<div class="card">
+<h3>EcoGuide: Sustainable Living Assistant</h3>
+<p>
+Built an AI assistant that answers user questions about eco-friendly habits, suggests daily sustainable actions, and tracks user progress.
+</p>
+</div>
+
+<div class="card">
+<h3>AWS Serverless Web Application</h3>
+<p>
+Designed a fully serverless web application using Amazon S3 and CloudFront. Developed backend using AWS Lambda with DynamoDB and Route 53 for secure routing.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="hidden">
+<h2 class="section-title">Certifications</h2>
+<div class="grid">
+
+<div class="card">
+<b>Python Certification - Internshala</b><br><br>
+Python fundamentals, OOP, and problem-solving.
+</div>
+
+<div class="card">
+<b>AWS Cloud Practitioner - AWS</b><br><br>
+Cloud concepts, core services, and security.
+</div>
+
+<div class="card">
+<b>SQL Certification - HackerRank</b><br><br>
+Queries, joins, and database fundamentals.
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="hidden">
+<h2 class="section-title">Contact</h2>
+<div class="card">
+📧 Email: patnapusaipavan@gmail.com <br>
+📱 Phone: +91 8688607540 <br>
+💻 GitHub: <a href="https://github.com/saipavanpatnapu" target="_blank">github.com/saipavanpatnapu</a><br>
+🔗 LinkedIn: <a href="https://www.linkedin.com/in/saipavanpatnapu/" target="_blank">linkedin.com/in/saipavanpatnapu</a><br>
+📍 Hyderabad, India
+</div>
+</section>
+
+<footer>
+© 2026 Sai Pavan Patnapu
+</footer>
+
+<script>
+const text="AI/ML Enthusiast | Developer | Cloud Explorer";
+let i=0;
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,40);
+}}
+typing();
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add("show")}
+})
+});
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
